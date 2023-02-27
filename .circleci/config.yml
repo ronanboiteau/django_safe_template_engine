@@ -1,0 +1,31 @@
+version: 2.1
+
+jobs:
+  run_tests:
+    working_directory: ~/safe_template_engine
+    docker:
+      - image: cimg/python:3.9.15
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependencies-v1-{{ checksum "tests/requirements.txt" }}
+      - run:
+          name: "Install dependencies in a virtual environment"
+          command: |
+            python -m virtualenv ../venv
+            source ../venv/bin/activate
+            python -m pip install -r tests/requirements.txt
+      - save_cache:
+          key: dependencies-v1-{{ checksum "tests/requirements.txt" }}
+          paths:
+            - ../venv
+      - run:
+          name: Run tests
+          command: |
+            source ../venv/bin/activate
+            python run_tests.py
+
+workflows:
+  workflow:
+    jobs:
+      - run_tests
