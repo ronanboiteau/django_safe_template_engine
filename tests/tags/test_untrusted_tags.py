@@ -1,7 +1,7 @@
+import pytest
 from django.template.base import Template
 from django.template.context import Context
 from django.template.exceptions import TemplateSyntaxError
-import pytest
 
 from safe_template_engine.engine import SafeTemplateEngine
 
