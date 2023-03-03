@@ -21,6 +21,11 @@ jobs:
           paths:
             - ../venv
       - run:
+          name: "Validate ordering of Python imports with isort"
+          command: |
+            source ../venv/bin/activate
+            isort --settings-path isort.cfg --check-only .
+      - run:
           name: Run tests
           command: |
             source ../venv/bin/activate
