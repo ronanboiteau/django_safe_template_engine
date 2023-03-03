@@ -1,7 +1,7 @@
 from django.template.base import Template
 from django.template.context import Context
 
-from safe_template_engine.engine import SafeTemplateEngine
+from django_safe_template_engine.engine import SafeTemplateEngine
 
 
 class TestTrustedTags:
