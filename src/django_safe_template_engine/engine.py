@@ -9,7 +9,7 @@ class SafeTemplateEngine(Engine):
             'django_safe_template_engine.trusted_tags',
         ]
 
-        super().__init__(self, **kwargs)
+        super().__init__(**kwargs)
 
         self.dirs = []
         self.app_dirs = False
