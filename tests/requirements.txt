@@ -1,6 +1,10 @@
-django == 3.0.*
-pytest
+# Path to package:
+..
 
 # Coding style:
 flake8
 isort
+
+# Test tools:
+pytest
+django == 3.0.*
