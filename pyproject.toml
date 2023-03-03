@@ -1,0 +1,18 @@
+[project]
+name = "django_safe_template_engine"
+version = "0.0.1"
+authors = [
+  { name="Ronan Boiteau", email="ronan@boiteau.ovh" },
+]
+description = "A Django template engine to render untrusted template code"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/guestready/django-safe-template-engine"
+"Bug Tracker" = "https://github.com/guestready/django-safe-template-engine/issues"
