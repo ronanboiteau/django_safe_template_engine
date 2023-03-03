@@ -21,6 +21,19 @@ class TestTrustedFilters:
         result = self._render('{{ "hello world"|capfirst }}')
         assert result == expected
 
+    def test_trust_escapejs(self):
+        expected = '\\u003Ctest\\u0026test\\u003E'
+        result = self._render('{{ "<test&test>"|escapejs }}')
+        assert result == expected
+
+    def test_trust_json_script(self):
+        expected = '<script id="test-id" type="application/json">"{\\"id\\": 1}"</script>'
+        result = self._render(
+            '{{ json_string|json_script:"test-id" }}',
+            context={'json_string': '{"id": 1}'}
+        )
+        assert result == expected
+
     def test_trust_floatformat(self):
         expected = '42'
         result = self._render('{{ 42.0000|floatformat }}')
