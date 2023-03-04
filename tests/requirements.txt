@@ -1,9 +1,10 @@
 # Path to package:
 ..
 
-# Coding style:
+# Coding style / typing:
 flake8
 isort
+mypy
 
 # Test tools:
 pytest

@@ -22,15 +22,20 @@ jobs:
           paths:
             - ../venv
       - run:
+          name: "Check Python typing"
+          command: |
+            source ../venv/bin/activate
+            mypy --config-file mypy.ini src tests
+      - run:
           name: "Validate ordering of Python imports with isort"
           command: |
             source ../venv/bin/activate
-            isort --settings-path isort.cfg --check-only .
+            isort --settings-path isort.cfg --check-only src tests
       - run:
           name: "Validate Python syntax with flake8"
           command: |
             source ../venv/bin/activate
-            flake8 --config .flake8 .
+            flake8 --config .flake8 src tests
       - run:
           name: Run tests
           command: |
