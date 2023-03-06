@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.template import Template, TemplateSyntaxError
+
 from django_safe_template_engine.engine import SafeTemplateEngine
 
 
