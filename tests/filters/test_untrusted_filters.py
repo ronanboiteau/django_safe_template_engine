@@ -16,7 +16,7 @@ class TestUntrustedFilters:
     def _msg_regex(self, filter_name):
         return rf"^Invalid filter: '{filter_name}'"
 
-    def test_do_not_trust_load(self):
+    def test_do_not_trust_pprint(self):
         with pytest.raises(
             TemplateSyntaxError,
             match=self._msg_regex('pprint'),
