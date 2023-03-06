@@ -14,5 +14,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/guestready/django-safe-template-engine"
-"Bug Tracker" = "https://github.com/guestready/django-safe-template-engine/issues"
+"Homepage" = "https://github.com/guestready/django_safe_template_engine"
+"Bug Tracker" = "https://github.com/guestready/django_safe_template_engine/issues"
