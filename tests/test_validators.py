@@ -1,7 +1,9 @@
 import pytest
-
 from django.core.exceptions import ValidationError
-from django_safe_template_engine.validators import validate_safe_engine_template_syntax
+
+from django_safe_template_engine.validators import (
+    validate_safe_engine_template_syntax,
+)
 
 
 class TestValidateSafeEngineTemplateSyntax:
