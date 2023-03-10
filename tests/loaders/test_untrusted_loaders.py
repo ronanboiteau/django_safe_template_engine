@@ -11,7 +11,7 @@ class TestUntrustedLoaders:
 
     def _render(self, template_code, context={}):
         template = Template(template_code, engine=self.engine)
-        return template.render(Context(context, autoescape=False))
+        return template.render(Context(context))
 
     def _msg_regex(self, loader_name):
         return rf"^Invalid block tag on line .+: '{loader_name}'"
