@@ -4,7 +4,7 @@ from django.template.engine import Engine
 class SafeTemplateEngine(Engine):
 
     def __init__(self, **kwargs):
-        self.default_builtins = [
+        self.default_builtins =[
             'django_safe_template_engine.trusted_filters',
             'django_safe_template_engine.trusted_tags',
         ]
