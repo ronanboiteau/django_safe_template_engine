@@ -1,6 +1,29 @@
+![GitHub Actions build status](https://github.com/guestready/django_safe_template_engine/actions/workflows/build.yml/badge.svg?branch=main)
+
 # Django Safe Template Engine
 
 Django template engine to render untrusted template code
+
+## Available tools
+
+Template engine:
+
+```py
+from django.template import Template
+from django_safe_template_engine.engine import SafeTemplateEngine
+
+safe_engine = SafeTemplateEngine
+Template(source, engine=safe_engine)
+```
+
+Validator:
+
+```py
+from django_safe_template_engine.validators import validate_safe_engine_template_syntax
+
+template_code = '{% include "hacked.html" %}'
+validate_safe_engine_template_syntax(template_code)
+```
 
 ## Trusted built-ins
 
