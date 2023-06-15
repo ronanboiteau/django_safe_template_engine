@@ -1,4 +1,4 @@
-name: workflow
+name: build
 run-name: Workflow triggered by ${{ github.actor }}
 
 on: [push]
