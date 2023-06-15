@@ -1,0 +1,30 @@
+name: build
+run-name: Workflow triggered by ${{ github.actor }}
+
+on: [push]
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          cd tests/
+          python -m pip install -r requirements.txt
+      - name: Check Python typing
+        run: mypy --config-file mypy.ini src tests
+      - name: Validate ordering of Python imports with isort
+        run: isort --settings-path isort.cfg --check-only src tests
+      - name: Validate Python syntax with flake8
+        run: flake8 --config .flake8 src tests
+      - name: Run tests
+        run: python run_tests.py
