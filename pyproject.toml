@@ -2,7 +2,7 @@
 name = "django_safe_template_engine"
 version = "0.1.0"
 authors = [
-  { name="Ronan Boiteau", email="ronan@boiteau.ovh" },
+  { name="Ronan Boiteau", email="ronan@boiteau.eu" },
 ]
 description = "A Django template engine to render untrusted template code"
 readme = "README.md"
