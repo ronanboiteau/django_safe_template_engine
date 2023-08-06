@@ -12,7 +12,7 @@ Template engine:
 from django.template import Template
 from django_safe_template_engine.engine import SafeTemplateEngine
 
-safe_engine = SafeTemplateEngine
+safe_engine = SafeTemplateEngine()
 Template(source, engine=safe_engine)
 ```
 
