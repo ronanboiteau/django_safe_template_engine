@@ -111,3 +111,4 @@ The following filters and tags are allowed by this template engine.
 - [`regroup`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#regroup)
 - [`resetcycle`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#resetcycle)
 - [`spaceless`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#spaceless)
+- [`templatetag`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#templatetag)

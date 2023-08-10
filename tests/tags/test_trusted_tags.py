@@ -179,3 +179,8 @@ class TestTrustedTags:
             {% endspaceless %}''',
         )
         assert result == expected
+
+    def test_trust_templatetag(self):
+        expected = '{%'
+        result = self._render('{% templatetag openblock %}')
+        assert result == expected
