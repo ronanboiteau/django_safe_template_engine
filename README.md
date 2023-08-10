@@ -4,6 +4,11 @@
 
 Django template engine to render untrusted template code
 
+## Requirements
+
+- Python 3.8 to 3.11
+- Django 3.0
+
 ## Available tools
 
 Template engine:
