@@ -16,6 +16,34 @@ class TestUntrustedTags:
     def _msg_regex(self, tag_name):
         return rf"^Invalid block tag on line .+: '{tag_name}'"
 
+    def test_do_not_trust_block(self):
+        with pytest.raises(
+            TemplateSyntaxError,
+            match=self._msg_regex('block'),
+        ):
+            self._render('{% block main %}')
+
+    def test_do_not_trust_csrf_token(self):
+        with pytest.raises(
+            TemplateSyntaxError,
+            match=self._msg_regex('csrf_token'),
+        ):
+            self._render('{% csrf_token %}')
+
+    def test_do_not_trust_debug(self):
+        with pytest.raises(
+            TemplateSyntaxError,
+            match=self._msg_regex('debug'),
+        ):
+            self._render('{% debug %}')
+
+    def test_do_not_trust_extends(self):
+        with pytest.raises(
+            TemplateSyntaxError,
+            match=self._msg_regex('extends'),
+        ):
+            self._render('{% extends "hacked.html" %}')
+
     def test_do_not_trust_load(self):
         with pytest.raises(
             TemplateSyntaxError,

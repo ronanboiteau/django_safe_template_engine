@@ -8,4 +8,4 @@ mypy
 
 # Test tools:
 pytest
-django == 3.0.*
+django == 3.0.*  # TODO: Add support more versions of Django

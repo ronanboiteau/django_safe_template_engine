@@ -1,5 +1,7 @@
+import pytest
 from django.template.base import Template
 from django.template.context import Context
+from django.template.exceptions import TemplateSyntaxError
 
 from django_safe_template_engine.engine import SafeTemplateEngine
 
@@ -16,9 +18,54 @@ class TestTrustedTags:
         result = self._render(
             '{% autoescape off %}'
             '<script></script>'
-            '{% endautoescape %}'
+            '{% endautoescape %}',
         )
         assert result == expected
+
+    def test_trust_comment(self):
+        expected = 'Displayed'
+        result = self._render(
+            'Displayed'
+            '{% comment %}'
+            'Hidden'
+            '{% endcomment %}',
+        )
+        assert result == expected
+
+    def test_trust_cycle(self):
+        expected = (
+            '<span class="text1">First text</span>'
+            '<span class="text2">Second text</span>'
+
+        )
+        result = self._render(
+            '{% for item in items %}'
+            '<span class="{% cycle "text1" "text2" "text3" %}">{{ item }}</span>'
+            '{% endfor %}',
+            context={'items': ['First text', 'Second text']}
+        )
+        assert result == expected
+
+    def test_trust_filter(self):
+        expected = '1. ONE\n2. TWO\n3. THREE'
+        result = self._render(
+            '{% filter linenumbers|upper %}'
+            'one\ntwo\nthree'
+            '{% endfilter %}',
+            context={'value': 'one\ntwo\nthree'},
+        )
+        assert result == expected
+
+    def test_trust_filter_with_untrusted_filter(self):
+        with pytest.raises(
+            TemplateSyntaxError,
+            match=r"^Invalid filter: 'pprint'",
+        ):
+            self._render(
+                '{% filter pprint %}'
+                'Unreachable due to usage of pprint filter'
+                '{% endfilter %}',
+            )
 
     def test_trust_firstof(self):
         expected = 'OK'
@@ -29,20 +76,58 @@ class TestTrustedTags:
         assert result == expected
 
     def test_trust_for(self):
-        expected = '1||2||3||'
+        expected = '123'
         result = self._render(
-            '{% for item in items %}{{ item }}||{% endfor %}',
+            '{% for item in items %}'
+            '{{ item }}'
+            '{% endfor %}',
             context={'items': [1, 2, 3]},
         )
         assert result == expected
 
-    def test_trust_if(self):
-        expected = 'OK'
+    def test_trust_for_empty(self):
+        expected = 'No items'
         result = self._render(
-            '{% if True %}'
-            'OK'
-            '{% else %}'
-            'KO'
-            '{% endif %}'
+            '{% for item in items %}'
+            '{{ item }}'
+            '{% empty %}'
+            'No items'
+            '{% endfor %}',
+            context={'items': []},
         )
         assert result == expected
+
+    def test_trust_if(self):
+        expected = 'New messages'
+        result = self._render(
+            '{% if messages %}'
+            'New messages'
+            '{% else %}'
+            'No new messages'
+            '{% endif %}',
+            context={'messages': ['message1', 'message2']}
+        )
+        assert result == expected
+
+    def test_trust_if_with_trusted_filter(self):
+        expected = 'New messages'
+        result = self._render(
+            '{% if messages|length > 0 %}'
+            'New messages'
+            '{% else %}'
+            'No new messages'
+            '{% endif %}',
+            context={'messages': ['message1', 'message2']}
+        )
+        assert result == expected
+
+    def test_if_with_untrusted_filter(self):
+        with pytest.raises(
+            TemplateSyntaxError,
+            match=r"^Invalid filter: 'pprint'",
+        ):
+            self._render(
+                '{% if messages|pprint %}'
+                'Unreachable due to usage of pprint filter'
+                '{% endif %}',
+            )
