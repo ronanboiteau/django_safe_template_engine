@@ -1,5 +1,5 @@
 from django.template.defaulttags import (
-    autoescape, comment, cycle, do_filter, do_for, do_if, firstof,
+    autoescape, comment, cycle, do_filter, do_for, do_if, firstof, ifchanged,
 )
 from django.template.library import Library
 
@@ -12,3 +12,4 @@ register.tag('filter', do_filter)
 register.tag(firstof)
 register.tag('for', do_for)
 register.tag('if', do_if)
+register.tag(ifchanged)

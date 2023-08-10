@@ -56,7 +56,7 @@ class TestTrustedTags:
         )
         assert result == expected
 
-    def test_trust_filter_with_untrusted_filter(self):
+    def test_filter_with_untrusted_filter(self):
         with pytest.raises(
             TemplateSyntaxError,
             match=r"^Invalid filter: 'pprint'",
@@ -131,3 +131,13 @@ class TestTrustedTags:
                 'Unreachable due to usage of pprint filter'
                 '{% endif %}',
             )
+
+    def test_trust_ifchanged(self):
+        expected = '123'
+        result = self._render(
+            '{% for number in numbers %}'
+            '{% ifchanged number %}{{ number }}{% endifchanged %}'
+            '{% endfor %}',
+            context={'numbers': [1, 1, 2, 3, 3]}
+        )
+        assert result == expected

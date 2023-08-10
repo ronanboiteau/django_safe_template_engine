@@ -105,3 +105,4 @@ The following filters and tags are allowed by this template engine.
 - [`for`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#for)
 - [`for … empty`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#for-empty)
 - [`if`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#if)
+- [`ifchanged`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#ifchanged)
