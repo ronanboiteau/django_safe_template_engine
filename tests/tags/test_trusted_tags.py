@@ -168,3 +168,14 @@ class TestTrustedTags:
             context={'items': ['First text', 'Second text']}
         )
         assert result == expected
+
+    def test_trust_spaceless(self):
+        expected = '<p><strong>Test</strong></p>'
+        result = self._render(
+            '''{% spaceless %}
+            <p>
+                <strong>Test</strong>
+            </p>
+            {% endspaceless %}''',
+        )
+        assert result == expected
