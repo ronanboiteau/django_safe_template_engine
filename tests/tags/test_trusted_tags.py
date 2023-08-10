@@ -151,3 +151,5 @@ class TestTrustedTags:
         expected = ['0', '1']
         result = self._render('{% now "I" %}')
         assert result in expected
+
+    # TODO: Write test for regroup

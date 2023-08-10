@@ -108,3 +108,4 @@ The following filters and tags are allowed by this template engine.
 - [`ifchanged`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#ifchanged)
 - [`lorem`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#lorem)
 - [`now`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#now)
+- [`regroup`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#regroup)
