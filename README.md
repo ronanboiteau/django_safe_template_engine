@@ -114,3 +114,4 @@ The following filters and tags are allowed by this template engine.
 - [`templatetag`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#templatetag)
 - [`verbatim`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#verbatim)
 - [`widthratio`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#widthratio)
+- [`with`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#with)

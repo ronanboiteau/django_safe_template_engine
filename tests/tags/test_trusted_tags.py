@@ -198,3 +198,12 @@ class TestTrustedTags:
         expected = '88'
         result = self._render('{% widthratio 175 200 100 %}')
         assert result == expected
+
+    def test_trust_with(self):
+        expected = '1 / 2'
+        result = self._render(
+            '{% with alpha=1 beta=2 %}'
+            '{{ alpha }} / {{ beta }}'
+            '{% endwith %}',
+        )
+        assert result == expected
