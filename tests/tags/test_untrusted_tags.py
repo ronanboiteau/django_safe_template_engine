@@ -44,6 +44,13 @@ class TestUntrustedTags:
         ):
             self._render('{% extends "hacked.html" %}')
 
+    def test_do_not_trust_include(self):
+        with pytest.raises(
+            TemplateSyntaxError,
+            match=self._msg_regex('include'),
+        ):
+            self._render('{% include "hacked.html" %}')
+
     def test_do_not_trust_load(self):
         with pytest.raises(
             TemplateSyntaxError,
