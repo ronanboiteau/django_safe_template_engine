@@ -153,3 +153,18 @@ class TestTrustedTags:
         assert result in expected
 
     # TODO: Write test for regroup
+
+    def test_trust_resetcycle(self):
+        expected = (
+            '<span class="text1">First text</span>'
+            '<span class="text1">Second text</span>'
+
+        )
+        result = self._render(
+            '{% for item in items %}'
+            '<span class="{% cycle "text1" "text2" "text3" %}">{{ item }}</span>'
+            '{% resetcycle %}'
+            '{% endfor %}',
+            context={'items': ['First text', 'Second text']}
+        )
+        assert result == expected

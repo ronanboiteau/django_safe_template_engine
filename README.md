@@ -109,3 +109,4 @@ The following filters and tags are allowed by this template engine.
 - [`lorem`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#lorem)
 - [`now`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#now)
 - [`regroup`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#regroup)
+- [`resetcycle`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#resetcycle)
