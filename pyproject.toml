@@ -1,6 +1,6 @@
 [project]
 name = "django_safe_template_engine"
-version = "0.1.0"
+version = "1.0.0"
 authors = [
   { name="Ronan Boiteau", email="ronan@boiteau.eu" },
 ]
