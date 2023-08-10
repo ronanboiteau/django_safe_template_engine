@@ -193,3 +193,8 @@ class TestTrustedTags:
             '{% endverbatim %}',
         )
         assert result == expected
+
+    def test_trust_widthratio(self):
+        expected = '88'
+        result = self._render('{% widthratio 175 200 100 %}')
+        assert result == expected
