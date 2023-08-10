@@ -112,6 +112,7 @@ The following filters and tags are allowed by this template engine.
 - [`resetcycle`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#resetcycle)
 - [`spaceless`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#spaceless)
 - [`templatetag`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#templatetag)
+- [`url`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#url)
 - [`verbatim`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#verbatim)
 - [`widthratio`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#widthratio)
 - [`with`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#with)

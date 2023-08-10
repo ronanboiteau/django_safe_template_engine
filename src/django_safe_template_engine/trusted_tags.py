@@ -1,6 +1,6 @@
 from django.template.defaulttags import (
     autoescape, comment, cycle, do_filter, do_for, do_if, do_with, firstof,
-    ifchanged, lorem, now, regroup, resetcycle, spaceless, templatetag,
+    ifchanged, lorem, now, regroup, resetcycle, spaceless, templatetag, url,
     verbatim, widthratio,
 )
 from django.template.library import Library
@@ -21,6 +21,7 @@ register.tag(regroup)
 register.tag(resetcycle)
 register.tag(spaceless)
 register.tag(templatetag)
+register.tag(url)
 register.tag(verbatim)
 register.tag(widthratio)
 register.tag('with', do_with)

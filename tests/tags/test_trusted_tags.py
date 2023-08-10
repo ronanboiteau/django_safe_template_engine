@@ -185,6 +185,8 @@ class TestTrustedTags:
         result = self._render('{% templatetag openblock %}')
         assert result == expected
 
+    # TODO: Write test for url
+
     def test_trust_verbatim(self):
         expected = '{% test %}'
         result = self._render(
