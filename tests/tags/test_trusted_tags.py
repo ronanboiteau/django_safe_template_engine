@@ -146,3 +146,8 @@ class TestTrustedTags:
         expected = 'Lorem ipsum'
         result = self._render('{% lorem 1 b %}')
         assert result.startswith(expected) is True
+
+    def test_trust_now(self):
+        expected = ['0', '1']
+        result = self._render('{% now "I" %}')
+        assert result in expected
