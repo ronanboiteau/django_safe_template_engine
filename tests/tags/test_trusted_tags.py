@@ -184,3 +184,12 @@ class TestTrustedTags:
         expected = '{%'
         result = self._render('{% templatetag openblock %}')
         assert result == expected
+
+    def test_trust_verbatim(self):
+        expected = '{% test %}'
+        result = self._render(
+            '{% verbatim %}'
+            '{% test %}'
+            '{% endverbatim %}',
+        )
+        assert result == expected
