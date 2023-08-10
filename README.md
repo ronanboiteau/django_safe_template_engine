@@ -32,7 +32,29 @@ validate_safe_engine_template_syntax(template_code)
 
 ## Trusted built-ins
 
-The following filters and tags are allowed by this template engine.
+The following tags and filters are allowed by this template engine.
+
+### Trusted tags
+
+- [`autoescape`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#autoescape)
+- [`comment`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#comment)
+- [`cycle`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#cycle)
+- [`filter`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#filter)
+- [`firstof`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#firstof)
+- [`for`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#for)
+- [`for … empty`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#for-empty)
+- [`if`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#if)
+- [`ifchanged`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#ifchanged)
+- [`lorem`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#lorem)
+- [`now`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#now)
+- [`regroup`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#regroup)
+- [`resetcycle`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#resetcycle)
+- [`spaceless`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#spaceless)
+- [`templatetag`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#templatetag)
+- [`url`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#url)
+- [`verbatim`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#verbatim)
+- [`widthratio`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#widthratio)
+- [`with`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#with)
 
 ### Trusted filters
 
@@ -94,25 +116,3 @@ The following filters and tags are allowed by this template engine.
 - [`filesizeformat`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#filesizeformat)
 - [`pluralize`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#pluralize)
 - [`phone2numeric`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#phone2numeric)
-
-### Trusted tags
-
-- [`autoescape`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#autoescape)
-- [`comment`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#comment)
-- [`cycle`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#cycle)
-- [`filter`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#filter)
-- [`firstof`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#firstof)
-- [`for`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#for)
-- [`for … empty`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#for-empty)
-- [`if`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#if)
-- [`ifchanged`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#ifchanged)
-- [`lorem`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#lorem)
-- [`now`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#now)
-- [`regroup`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#regroup)
-- [`resetcycle`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#resetcycle)
-- [`spaceless`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#spaceless)
-- [`templatetag`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#templatetag)
-- [`url`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#url)
-- [`verbatim`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#verbatim)
-- [`widthratio`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#widthratio)
-- [`with`](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#with)
