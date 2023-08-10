@@ -141,3 +141,8 @@ class TestTrustedTags:
             context={'numbers': [1, 1, 2, 3, 3]}
         )
         assert result == expected
+
+    def test_trust_lorem(self):
+        expected = 'Lorem ipsum'
+        result = self._render('{% lorem 1 b %}')
+        assert result.startswith(expected) is True
