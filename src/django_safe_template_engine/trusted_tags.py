@@ -1,5 +1,5 @@
 from django.template.defaulttags import (
-    autoescape, comment, cycle, do_for, do_if, do_filter, firstof,
+    autoescape, comment, cycle, do_filter, do_for, do_if, firstof,
 )
 from django.template.library import Library
 
