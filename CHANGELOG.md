@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.0 - Unreleased
+## 1.1.0 - 2024-02-04
 
 - Add official support for Django 3.2:
     - Use Django 3.2 in technical tests
