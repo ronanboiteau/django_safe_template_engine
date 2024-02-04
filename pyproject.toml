@@ -1,12 +1,12 @@
 [project]
 name = "django_safe_template_engine"
-version = "1.0.0"
+version = "1.1.0"
 authors = [
   { name="Ronan Boiteau", email="ronan@boiteau.eu" },
 ]
 description = "A Django template engine to render untrusted template code"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: BSD License",
