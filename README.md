@@ -1,4 +1,4 @@
-![GitHub Actions build status](https://github.com/guestready/django_safe_template_engine/actions/workflows/build.yml/badge.svg?branch=main)
+![GitHub Actions build status](https://github.com/ronanboiteau/django_safe_template_engine/actions/workflows/build.yml/badge.svg?branch=main)
 
 # Django Safe Template Engine
 
