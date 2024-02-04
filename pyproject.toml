@@ -6,7 +6,7 @@ authors = [
 ]
 description = "A Django template engine to render untrusted template code"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: BSD License",
