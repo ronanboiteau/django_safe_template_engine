@@ -6,6 +6,7 @@
     - Use Django 3.2 in technical tests
     - Review all the Django 3.2 built-in template tags and filters (no changes needed)
 - Drop official support for Django 3.0 (still unofficially supported in this version as there are no breaking changes)
+- Remove Python 3.7 from supported versions in `pyproject.toml` (never officially supported)
 - Start keeping a changelog in `CHANGELOG.md`
 
 ## 1.0.0 - 2023-08-10
