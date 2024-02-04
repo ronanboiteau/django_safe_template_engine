@@ -7,7 +7,7 @@ Django template engine to render untrusted template code
 ## Requirements
 
 - Python 3.8 to 3.11
-- Django 3.2
+- Django 3.2 (officially supported in technical tests, all built-in template tags and filters reviewed)
 
 ## Available tools
 
