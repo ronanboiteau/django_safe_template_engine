@@ -19,27 +19,27 @@ class TestUntrustedLoaders:
     def test_do_not_trust_block(self):
         with pytest.raises(
             TemplateSyntaxError,
-            match=self._msg_regex('block'),
+            match=self._msg_regex("block"),
         ):
-            self._render('{% block content %}{% endblockcontent %}')
+            self._render("{% block content %}{% endblockcontent %}")
 
     def test_do_not_trust_extends(self):
         with pytest.raises(
             TemplateSyntaxError,
-            match=self._msg_regex('extends'),
+            match=self._msg_regex("extends"),
         ):
             self._render('{% extends "hacked.html" %}')
 
     def test_do_not_trust_include(self):
         with pytest.raises(
             TemplateSyntaxError,
-            match=self._msg_regex('include'),
+            match=self._msg_regex("include"),
         ):
             self._render('{% include "hacked.html" %}')
 
     def test_do_not_trust_static(self):
         with pytest.raises(
             TemplateSyntaxError,
-            match=self._msg_regex('static'),
+            match=self._msg_regex("static"),
         ):
             self._render('{% static "hacked.css" %}')

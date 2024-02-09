@@ -26,5 +26,7 @@ jobs:
         run: isort --settings-path isort.cfg --check-only src tests
       - name: Validate Python syntax with flake8
         run: flake8 --config .flake8 src tests
+      - name: Check Python formatting with black
+        run: black --check .
       - name: Run tests
         run: python run_tests.py

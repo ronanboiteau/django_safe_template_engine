@@ -1,7 +1,12 @@
 [flake8]
-max-line-length = 119
 exclude =
     .venv
 ignore =
+    # For compatibility with black:
+    E203,
+    E701,
+    E704,
+    # Let black manage the line length:
+    E501,
     # See https://www.flake8rules.com/rules/W503.html
     W503

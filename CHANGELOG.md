@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Reformat source code with with [black](https://pypi.org/project/black/)
+
 ## 1.1.0 - 2024-02-04
 
 - Add official support for Django 3.2:
