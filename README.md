@@ -14,6 +14,7 @@ Django template engine to render untrusted template code
 * __[Contribute](#contribute)__
   * [How to contribute](#how-to-contribute)
   * [Code formatting and tests](#code-formatting-and-tests)
+  * [Ignore code formatting revisions from git blame](#ignore-code-formatting-revisions-from-git-blame)
 
 ## Requirements
 
@@ -187,3 +188,11 @@ Here is how to run the code formatting / type checking tools, and run the test s
     ```sh
     python run_tests.py
     ```
+
+### Ignore code formatting revisions from git blame
+
+For a more relevant git blame you can set up your git to use the file [`.git-blame-ignore-revs`](.git-blame-ignore-revs) in [`blame.ignoreRevsFile`](https://www.git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt):
+
+```sh
+git config blame.ignoreRevsFile .git-blame-ignore-revs
+```
