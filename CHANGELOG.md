@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Reformat source code with with [black](https://pypi.org/project/black/)
+- Add `.git-blame-ignore-revs` with revisions to ignore in `git blame`
 - Set up project for PyPi release
     - Update `pyproject.toml`
     - Add contributing guidelines to `README.md`
