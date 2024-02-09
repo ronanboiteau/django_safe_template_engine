@@ -1,18 +1,23 @@
 [project]
 name = "django_safe_template_engine"
 version = "1.1.0"
-authors = [
-  { name="Ronan Boiteau", email="ronan@boiteau.eu" },
-]
+dependencies = ["django >= 3.2, < 4"]
+requires-python = ">=3.8"
+authors = [{ name = "Ronan Boiteau", email = "ronan@boiteau.eu" }]
+maintainers = [{ name = "Ronan Boiteau", email = "ronan@boiteau.eu" }]
 description = "A Django template engine to render untrusted template code"
 readme = "README.md"
-requires-python = ">=3.8"
+license = { file = "LICENSE" }
+keywords = ["django", "safe", "template", "engine"]
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: BSD License",
-    "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/ronanboiteau/django_safe_template_engine"
-"Bug Tracker" = "https://github.com/ronanboiteau/django_safe_template_engine/issues"
+Homepage = "https://github.com/ronanboiteau/django_safe_template_engine"
+Documentation = "https://github.com/ronanboiteau/django_safe_template_engine/blob/main/README.md"
+Repository = "https://github.com/ronanboiteau/django_safe_template_engine.git"
+Issues = "https://github.com/ronanboiteau/django_safe_template_engine/issues"
+Changelog = "https://github.com/ronanboiteau/django_safe_template_engine/blob/main/CHANGELOG.md"
