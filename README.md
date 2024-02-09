@@ -8,6 +8,8 @@ Django template engine to render untrusted template code
 
 * __[Requirements](#requirements)__
 * __[Available tools](#available-tools)__
+  * [Template engine](#template-engine)
+  * [Validator](#validator)
 * __[Trusted built-ins](#trusted-built-ins)__
   * [Trusted tags](#trusted-tags)
   * [Trusted filters](#trusted-filters)
@@ -23,7 +25,7 @@ Django template engine to render untrusted template code
 
 ## Available tools
 
-Template engine:
+### Template engine
 
 ```py
 from django.template import Template
@@ -33,7 +35,7 @@ safe_engine = SafeTemplateEngine()
 Template(source, engine=safe_engine)
 ```
 
-Validator:
+### Validator
 
 ```py
 from django_safe_template_engine.validators import validate_safe_engine_template_syntax
