@@ -4,10 +4,21 @@
 
 Django template engine to render untrusted template code
 
+## Table of contents
+
+* __[Requirements](#requirements)__
+* __[Available tools](#available-tools)__
+* __[Trusted built-ins](#trusted-built-ins)__
+  * [Trusted tags](#trusted-tags)
+  * [Trusted filters](#trusted-filters)
+* __[Contribute](#contribute)__
+  * [How to contribute](#how-to-contribute)
+  * [Code formatting and tests](#code-formatting-and-tests)
+
 ## Requirements
 
 - Python 3.8 to 3.11
-- Django 3.2 (officially supported in technical tests, all built-in template tags and filters reviewed)
+- Django 3.2 (officially supported in automated tests, all built-in template tags and filters reviewed)
 
 ## Available tools
 
@@ -116,3 +127,63 @@ The following tags and filters are allowed by this template engine.
 - [`filesizeformat`](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#filesizeformat)
 - [`pluralize`](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#pluralize)
 - [`phone2numeric`](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#phone2numeric)
+
+## Contribute
+
+
+### How to contribute
+
+You want to add awesome features to Django Safe Template Engine? Here's how!
+
+1. [Fork](https://github.com/ronanboiteau/django_safe_template_engine/fork) this repository
+2. Commit and push to your forked repository
+3. Open a [pull request](https://github.com/ronanboiteau/django_safe_template_engine/pulls) to merge your work into this repository
+
+### Code formatting and tests
+
+Here is how to run the code formatting / type checking tools, and run the test suite.
+
+1. [Recommended] Create a Python venv for this repository:
+
+    ```sh
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
+
+2. Install the dependencies:
+
+    ```sh
+    cd tests/ && pip install -r requirements.txt && cd ..
+    ```
+
+3. Run the code formatting tools:
+
+    [`black`](https://pypi.org/project/black/) code formatter:
+
+    ```sh
+    black src tests
+    ```
+
+    [`isort`](https://pypi.org/project/isort/) import sorter:
+
+    ```sh
+    isort --settings-path isort.cfg src tests
+    ```
+
+    [`flake8`](https://pypi.org/project/flake8/) coding style checker:
+
+    ```sh
+    flake8 --config .flake8 src tests
+    ```
+
+    [`mypy`](https://pypi.org/project/mypy/) type checker:
+
+    ```sh
+    mypy --config-file mypy.ini src tests
+    ```
+
+4. Run the test suite:
+
+    ```sh
+    python run_tests.py
+    ```
