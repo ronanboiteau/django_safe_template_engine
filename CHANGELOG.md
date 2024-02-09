@@ -3,6 +3,9 @@
 ## Unreleased
 
 - Reformat source code with with [black](https://pypi.org/project/black/)
+- Set up project for PyPi release
+    - Update `pyproject.toml`
+    - Add contributing guidelines to `README.md`
 
 ## 1.1.0 - 2024-02-04
 
