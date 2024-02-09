@@ -20,13 +20,13 @@ jobs:
         run: |
           cd tests/
           python -m pip install -r requirements.txt
-      - name: Check Python typing
-        run: mypy --config-file mypy.ini src tests
+      - name: Check Python formatting with black
+        run: black --check src tests
       - name: Validate ordering of Python imports with isort
         run: isort --settings-path isort.cfg --check-only src tests
       - name: Validate Python syntax with flake8
         run: flake8 --config .flake8 src tests
-      - name: Check Python formatting with black
-        run: black --check src tests
+      - name: Check Python typing
+        run: mypy --config-file mypy.ini src tests
       - name: Run tests
         run: python run_tests.py
