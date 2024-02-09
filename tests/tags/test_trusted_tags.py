@@ -14,21 +14,16 @@ class TestTrustedTags:
         return template.render(Context(context))
 
     def test_trust_autoescape(self):
-        expected = '<script></script>'
+        expected = "<script></script>"
         result = self._render(
-            '{% autoescape off %}'
-            '<script></script>'
-            '{% endautoescape %}',
+            "{% autoescape off %}" "<script></script>" "{% endautoescape %}",
         )
         assert result == expected
 
     def test_trust_comment(self):
-        expected = 'Displayed'
+        expected = "Displayed"
         result = self._render(
-            'Displayed'
-            '{% comment %}'
-            'Hidden'
-            '{% endcomment %}',
+            "Displayed" "{% comment %}" "Hidden" "{% endcomment %}",
         )
         assert result == expected
 
@@ -36,23 +31,20 @@ class TestTrustedTags:
         expected = (
             '<span class="text1">First text</span>'
             '<span class="text2">Second text</span>'
-
         )
         result = self._render(
-            '{% for item in items %}'
+            "{% for item in items %}"
             '<span class="{% cycle "text1" "text2" "text3" %}">{{ item }}</span>'
-            '{% endfor %}',
-            context={'items': ['First text', 'Second text']}
+            "{% endfor %}",
+            context={"items": ["First text", "Second text"]},
         )
         assert result == expected
 
     def test_trust_filter(self):
-        expected = '1. ONE\n2. TWO\n3. THREE'
+        expected = "1. ONE\n2. TWO\n3. THREE"
         result = self._render(
-            '{% filter linenumbers|upper %}'
-            'one\ntwo\nthree'
-            '{% endfilter %}',
-            context={'value': 'one\ntwo\nthree'},
+            "{% filter linenumbers|upper %}" "one\ntwo\nthree" "{% endfilter %}",
+            context={"value": "one\ntwo\nthree"},
         )
         assert result == expected
 
@@ -62,62 +54,60 @@ class TestTrustedTags:
             match=r"^Invalid filter: 'pprint'",
         ):
             self._render(
-                '{% filter pprint %}'
-                'Unreachable due to usage of pprint filter'
-                '{% endfilter %}',
+                "{% filter pprint %}"
+                "Unreachable due to usage of pprint filter"
+                "{% endfilter %}",
             )
 
     def test_trust_firstof(self):
-        expected = 'OK'
+        expected = "OK"
         result = self._render(
             '{% firstof empty "OK" %}',
-            context={'empty': ''},
+            context={"empty": ""},
         )
         assert result == expected
 
     def test_trust_for(self):
-        expected = '123'
+        expected = "123"
         result = self._render(
-            '{% for item in items %}'
-            '{{ item }}'
-            '{% endfor %}',
-            context={'items': [1, 2, 3]},
+            "{% for item in items %}" "{{ item }}" "{% endfor %}",
+            context={"items": [1, 2, 3]},
         )
         assert result == expected
 
     def test_trust_for_empty(self):
-        expected = 'No items'
+        expected = "No items"
         result = self._render(
-            '{% for item in items %}'
-            '{{ item }}'
-            '{% empty %}'
-            'No items'
-            '{% endfor %}',
-            context={'items': []},
+            "{% for item in items %}"
+            "{{ item }}"
+            "{% empty %}"
+            "No items"
+            "{% endfor %}",
+            context={"items": []},
         )
         assert result == expected
 
     def test_trust_if(self):
-        expected = 'New messages'
+        expected = "New messages"
         result = self._render(
-            '{% if messages %}'
-            'New messages'
-            '{% else %}'
-            'No new messages'
-            '{% endif %}',
-            context={'messages': ['message1', 'message2']}
+            "{% if messages %}"
+            "New messages"
+            "{% else %}"
+            "No new messages"
+            "{% endif %}",
+            context={"messages": ["message1", "message2"]},
         )
         assert result == expected
 
     def test_trust_if_with_trusted_filter(self):
-        expected = 'New messages'
+        expected = "New messages"
         result = self._render(
-            '{% if messages|length > 0 %}'
-            'New messages'
-            '{% else %}'
-            'No new messages'
-            '{% endif %}',
-            context={'messages': ['message1', 'message2']}
+            "{% if messages|length > 0 %}"
+            "New messages"
+            "{% else %}"
+            "No new messages"
+            "{% endif %}",
+            context={"messages": ["message1", "message2"]},
         )
         assert result == expected
 
@@ -127,28 +117,28 @@ class TestTrustedTags:
             match=r"^Invalid filter: 'pprint'",
         ):
             self._render(
-                '{% if messages|pprint %}'
-                'Unreachable due to usage of pprint filter'
-                '{% endif %}',
+                "{% if messages|pprint %}"
+                "Unreachable due to usage of pprint filter"
+                "{% endif %}",
             )
 
     def test_trust_ifchanged(self):
-        expected = '123'
+        expected = "123"
         result = self._render(
-            '{% for number in numbers %}'
-            '{% ifchanged number %}{{ number }}{% endifchanged %}'
-            '{% endfor %}',
-            context={'numbers': [1, 1, 2, 3, 3]}
+            "{% for number in numbers %}"
+            "{% ifchanged number %}{{ number }}{% endifchanged %}"
+            "{% endfor %}",
+            context={"numbers": [1, 1, 2, 3, 3]},
         )
         assert result == expected
 
     def test_trust_lorem(self):
-        expected = 'Lorem ipsum'
-        result = self._render('{% lorem 1 b %}')
+        expected = "Lorem ipsum"
+        result = self._render("{% lorem 1 b %}")
         assert result.startswith(expected) is True
 
     def test_trust_now(self):
-        expected = ['0', '1']
+        expected = ["0", "1"]
         result = self._render('{% now "I" %}')
         assert result in expected
 
@@ -158,54 +148,49 @@ class TestTrustedTags:
         expected = (
             '<span class="text1">First text</span>'
             '<span class="text1">Second text</span>'
-
         )
         result = self._render(
-            '{% for item in items %}'
+            "{% for item in items %}"
             '<span class="{% cycle "text1" "text2" "text3" %}">{{ item }}</span>'
-            '{% resetcycle %}'
-            '{% endfor %}',
-            context={'items': ['First text', 'Second text']}
+            "{% resetcycle %}"
+            "{% endfor %}",
+            context={"items": ["First text", "Second text"]},
         )
         assert result == expected
 
     def test_trust_spaceless(self):
-        expected = '<p><strong>Test</strong></p>'
+        expected = "<p><strong>Test</strong></p>"
         result = self._render(
-            '''{% spaceless %}
+            """{% spaceless %}
             <p>
                 <strong>Test</strong>
             </p>
-            {% endspaceless %}''',
+            {% endspaceless %}""",
         )
         assert result == expected
 
     def test_trust_templatetag(self):
-        expected = '{%'
-        result = self._render('{% templatetag openblock %}')
+        expected = "{%"
+        result = self._render("{% templatetag openblock %}")
         assert result == expected
 
     # TODO: Write test for url
 
     def test_trust_verbatim(self):
-        expected = '{% test %}'
+        expected = "{% test %}"
         result = self._render(
-            '{% verbatim %}'
-            '{% test %}'
-            '{% endverbatim %}',
+            "{% verbatim %}" "{% test %}" "{% endverbatim %}",
         )
         assert result == expected
 
     def test_trust_widthratio(self):
-        expected = '88'
-        result = self._render('{% widthratio 175 200 100 %}')
+        expected = "88"
+        result = self._render("{% widthratio 175 200 100 %}")
         assert result == expected
 
     def test_trust_with(self):
-        expected = '1 / 2'
+        expected = "1 / 2"
         result = self._render(
-            '{% with alpha=1 beta=2 %}'
-            '{{ alpha }} / {{ beta }}'
-            '{% endwith %}',
+            "{% with alpha=1 beta=2 %}" "{{ alpha }} / {{ beta }}" "{% endwith %}",
         )
         assert result == expected

@@ -1,13 +1,59 @@
 from django.template.defaultfilters import (
-    add, addslashes, capfirst, center, cut, date, default, default_if_none,
-    dictsort, dictsortreversed, divisibleby, escape_filter, escapejs_filter,
-    filesizeformat, first, floatformat, force_escape, get_digit, iriencode,
-    join, json_script, last, length, length_is, linebreaks_filter,
-    linebreaksbr, linenumbers, ljust, lower, make_list, phone2numeric_filter,
-    pluralize, random, rjust, safe, safeseq, slice_filter, slugify,
-    stringformat, striptags, time, timesince_filter, timeuntil_filter, title,
-    truncatechars, truncatechars_html, truncatewords, truncatewords_html,
-    unordered_list, upper, urlencode, urlize, urlizetrunc, wordcount, wordwrap,
+    add,
+    addslashes,
+    capfirst,
+    center,
+    cut,
+    date,
+    default,
+    default_if_none,
+    dictsort,
+    dictsortreversed,
+    divisibleby,
+    escape_filter,
+    escapejs_filter,
+    filesizeformat,
+    first,
+    floatformat,
+    force_escape,
+    get_digit,
+    iriencode,
+    join,
+    json_script,
+    last,
+    length,
+    length_is,
+    linebreaks_filter,
+    linebreaksbr,
+    linenumbers,
+    ljust,
+    lower,
+    make_list,
+    phone2numeric_filter,
+    pluralize,
+    random,
+    rjust,
+    safe,
+    safeseq,
+    slice_filter,
+    slugify,
+    stringformat,
+    striptags,
+    time,
+    timesince_filter,
+    timeuntil_filter,
+    title,
+    truncatechars,
+    truncatechars_html,
+    truncatewords,
+    truncatewords_html,
+    unordered_list,
+    upper,
+    urlencode,
+    urlize,
+    urlizetrunc,
+    wordcount,
+    wordwrap,
     yesno,
 )
 from django.template.library import Library
@@ -16,7 +62,7 @@ register = Library()
 
 register.filter(addslashes, is_safe=True)
 register.filter(capfirst, is_safe=True)
-register.filter('escapejs', escapejs_filter)
+register.filter("escapejs", escapejs_filter)
 register.filter(json_script, is_safe=True)
 register.filter(floatformat, is_safe=True)
 register.filter(iriencode, is_safe=True)
@@ -40,9 +86,9 @@ register.filter(ljust, is_safe=True)
 register.filter(rjust, is_safe=True)
 register.filter(center, is_safe=True)
 register.filter(cut)
-register.filter('escape', escape_filter, is_safe=True)
+register.filter("escape", escape_filter, is_safe=True)
 register.filter(force_escape, is_safe=True)
-register.filter('linebreaks', linebreaks_filter, is_safe=True, needs_autoescape=True)
+register.filter("linebreaks", linebreaks_filter, is_safe=True, needs_autoescape=True)
 register.filter(linebreaksbr, is_safe=True, needs_autoescape=True)
 register.filter(safe, is_safe=True)
 register.filter(safeseq, is_safe=True)
@@ -55,18 +101,18 @@ register.filter(last, is_safe=True)
 register.filter(length, is_safe=False)
 register.filter(length_is, is_safe=False)
 register.filter(random, is_safe=True)
-register.filter('slice', slice_filter, is_safe=True)
+register.filter("slice", slice_filter, is_safe=True)
 register.filter(unordered_list, is_safe=True, needs_autoescape=True)
 register.filter(add, is_safe=False)
 register.filter(get_digit, is_safe=False)
 register.filter(date, expects_localtime=True, is_safe=False)
 register.filter(time, expects_localtime=True, is_safe=False)
-register.filter('timesince', timesince_filter, is_safe=False)
-register.filter('timeuntil', timeuntil_filter, is_safe=False)
+register.filter("timesince", timesince_filter, is_safe=False)
+register.filter("timeuntil", timeuntil_filter, is_safe=False)
 register.filter(default, is_safe=False)
 register.filter(default_if_none, is_safe=False)
 register.filter(divisibleby, is_safe=False)
 register.filter(yesno, is_safe=False)
 register.filter(filesizeformat, is_safe=True)
 register.filter(pluralize, is_safe=False)
-register.filter('phone2numeric', phone2numeric_filter, is_safe=True)
+register.filter("phone2numeric", phone2numeric_filter, is_safe=True)

@@ -19,9 +19,6 @@ class TestUntrustedFilters:
     def test_do_not_trust_pprint(self):
         with pytest.raises(
             TemplateSyntaxError,
-            match=self._msg_regex('pprint'),
+            match=self._msg_regex("pprint"),
         ):
-            self._render(
-                '{{ test_list|pprint }}',
-                context={'test_list': []}
-            )
+            self._render("{{ test_list|pprint }}", context={"test_list": []})
