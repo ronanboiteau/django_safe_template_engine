@@ -15,6 +15,10 @@ classifiers = [
   "Operating System :: OS Independent",
 ]
 
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project.urls]
 Homepage = "https://github.com/ronanboiteau/django_safe_template_engine"
 Documentation = "https://github.com/ronanboiteau/django_safe_template_engine/blob/main/README.md"
