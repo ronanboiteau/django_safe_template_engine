@@ -9,4 +9,4 @@ mypy
 
 # Test tools:
 pytest
-django == 3.2.*
+django == 4.2.*

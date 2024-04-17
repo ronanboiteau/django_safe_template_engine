@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Add official support for Django 4.2:
+    - Use Django 4.2 in technical tests
+    - Review all the Django 4.2 built-in template tags and filters (no changes needed)
+- Drop official support for Django 3.2 (still unofficially supported in this version as there are no breaking changes)
+
 ## 1.2.0 - 2024-04-18
 
 - Add official support for Python 3.12
