@@ -1,14 +1,14 @@
 # Changelog
 
-## Unreleased
+## 1.2.0 - 2024-04-18
 
-- Reformat source code with with [black](https://pypi.org/project/black/)
-- Add `.git-blame-ignore-revs` with revisions to ignore in `git blame`
-- Set up project for PyPi release
-    - Update `pyproject.toml`
-    - Add contributing guidelines to `README.md`
-- Sort filters by alphabetical order in the documentation and source code
 - Add official support for Python 3.12
+- Reformat source code with with [black](https://pypi.org/project/black/)
+- Set up project for PyPi release
+    - Update `pyproject.toml` with build system and other details for PyPi
+    - Add contributing guidelines to `README.md`
+- Add `.git-blame-ignore-revs` with revisions to ignore in `git blame`
+- Sort filters by alphabetical order in the documentation and source code
 
 ## 1.1.0 - 2024-02-04
 
