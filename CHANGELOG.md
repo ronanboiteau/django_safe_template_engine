@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Use [tox](https://tox.wiki/) to manage test suite environment
+
 ## 1.2.0 - 2024-04-18
 
 - Add official support for Python 3.12

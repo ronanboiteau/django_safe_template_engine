@@ -8,15 +8,15 @@ Django template engine to render untrusted template code
 
 * __[Requirements](#requirements)__
 * __[Available tools](#available-tools)__
-  * [Template engine](#template-engine)
-  * [Validator](#validator)
+    * [Template engine](#template-engine)
+    * [Validator](#validator)
 * __[Trusted built-ins](#trusted-built-ins)__
-  * [Trusted tags](#trusted-tags)
-  * [Trusted filters](#trusted-filters)
+    * [Trusted tags](#trusted-tags)
+    * [Trusted filters](#trusted-filters)
 * __[Contribute](#contribute)__
-  * [How to contribute](#how-to-contribute)
-  * [Code formatting and tests](#code-formatting-and-tests)
-  * [Ignore code formatting revisions from git blame](#ignore-code-formatting-revisions-from-git-blame)
+    * [How to contribute](#how-to-contribute)
+    * [Code formatting and tests](#code-formatting-and-tests)
+    * [Ignore code formatting revisions from git blame](#ignore-code-formatting-revisions-from-git-blame)
 
 ## Requirements
 
@@ -142,51 +142,10 @@ You want to add awesome features to Django Safe Template Engine? Here's how!
 
 ### Code formatting and tests
 
-Here is how to run the code formatting / type checking tools, and run the test suite.
-
-1. [Recommended] Create a Python venv for this repository:
+You can use [tox](https://tox.wiki/) to run the code formatting / type checking tools, and run the test suite:
 
     ```sh
-    python3 -m venv .venv
-    source .venv/bin/activate
-    ```
-
-2. Install the dependencies:
-
-    ```sh
-    cd tests/ && pip install -r requirements.txt && cd ..
-    ```
-
-3. Run the code formatting tools:
-
-    [`black`](https://pypi.org/project/black/) code formatter:
-
-    ```sh
-    black src tests
-    ```
-
-    [`isort`](https://pypi.org/project/isort/) import sorter:
-
-    ```sh
-    isort --settings-path isort.cfg src tests
-    ```
-
-    [`flake8`](https://pypi.org/project/flake8/) coding style checker:
-
-    ```sh
-    flake8 --config .flake8 src tests
-    ```
-
-    [`mypy`](https://pypi.org/project/mypy/) type checker:
-
-    ```sh
-    mypy --config-file mypy.ini src tests
-    ```
-
-4. Run the test suite:
-
-    ```sh
-    python run_tests.py
+    tox run
     ```
 
 ### Ignore code formatting revisions from git blame
