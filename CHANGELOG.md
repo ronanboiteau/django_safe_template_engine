@@ -7,6 +7,7 @@
 - Set up project for PyPi release
     - Update `pyproject.toml`
     - Add contributing guidelines to `README.md`
+- Sort filters by alphabetical order in the documentation and source code
 
 ## 1.1.0 - 2024-02-04
 
