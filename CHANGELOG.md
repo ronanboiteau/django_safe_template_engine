@@ -8,6 +8,7 @@
     - Update `pyproject.toml`
     - Add contributing guidelines to `README.md`
 - Sort filters by alphabetical order in the documentation and source code
+- Add official support for Python 3.12
 
 ## 1.1.0 - 2024-02-04
 
