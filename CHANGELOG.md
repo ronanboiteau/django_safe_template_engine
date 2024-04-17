@@ -3,7 +3,7 @@
 ## Unreleased
 
 - Add official support for Django 4.2:
-    - Use Django 4.2 in technical tests
+    - Use Django 4.2 in automated tests
     - Review all the Django 4.2 built-in template tags and filters (no changes needed)
 - Use [tox](https://tox.wiki/) to manage test suite environment
 
@@ -20,7 +20,7 @@
 ## 1.1.0 - 2024-02-04
 
 - Add official support for Django 3.2:
-    - Use Django 3.2 in technical tests
+    - Use Django 3.2 in automated tests
     - Review all the Django 3.2 built-in template tags and filters (no changes needed)
 - Drop official support for Django 3.0 (still unofficially supported in this version as there are no breaking changes)
 - Remove Python 3.7 from supported versions in `pyproject.toml` (never officially supported)
@@ -31,5 +31,5 @@
 - Review all the Django 3.0 built-in template tags and filters:
     - Allow the ones considered safe
     - Make sure the rest is forbidden with technical test coverage
-- Add official support for Python 3.8 to Python 3.11 (covered by technical tests)
-- Add official support for Django 3.0 (covered by technical tests)
+- Add official support for Python 3.8 to Python 3.11 (covered by automated tests)
+- Add official support for Django 3.0 (covered by automated tests)
