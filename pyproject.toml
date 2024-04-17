@@ -20,7 +20,6 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project.urls]
-Homepage = "https://github.com/ronanboiteau/django_safe_template_engine"
 Documentation = "https://github.com/ronanboiteau/django_safe_template_engine/blob/main/README.md"
 Repository = "https://github.com/ronanboiteau/django_safe_template_engine.git"
 Issues = "https://github.com/ronanboiteau/django_safe_template_engine/issues"
