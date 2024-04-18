@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1 - 2024-04-18
+
+- Small fixes in changelog and README
+
 ## 1.3.0 - 2024-04-18
 
 - Lower Django version requirement to 3.0
