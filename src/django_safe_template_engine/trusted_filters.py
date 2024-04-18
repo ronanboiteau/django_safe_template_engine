@@ -1,3 +1,4 @@
+from django import VERSION
 from django.template.defaultfilters import (
     add,
     addslashes,
@@ -73,6 +74,12 @@ register.filter(dictsortreversed, is_safe=False)
 register.filter(divisibleby, is_safe=False)
 register.filter("escape", escape_filter, is_safe=True)
 register.filter("escapejs", escapejs_filter)
+
+if VERSION[0] == 5:
+    from django.template.defaultfilters import escapeseq
+
+    register.filter(escapeseq)
+
 register.filter(filesizeformat, is_safe=True)
 register.filter(first, is_safe=False)
 register.filter(floatformat, is_safe=True)
