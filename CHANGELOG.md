@@ -3,7 +3,7 @@
 ## Unreleased
 
 - Add official support for Django 4.0 to 4.2 with:
-    - Add automated test coverage
+    - Addition of automated test coverage
     - Review of all the built-in template tags and filters (no changes needed)
 - Use [tox](https://tox.wiki/) to manage test suite environment
 
