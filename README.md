@@ -143,9 +143,9 @@ You want to add awesome features to Django Safe Template Engine? Here's how!
 
 You can use [tox](https://tox.wiki/) to run the code formatting / type checking tools, and run the test suite:
 
-    ```sh
-    tox run
-    ```
+```sh
+tox run
+```
 
 ### Ignore code formatting revisions from git blame
 
