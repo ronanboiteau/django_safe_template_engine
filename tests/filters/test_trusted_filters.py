@@ -1,3 +1,4 @@
+from django import VERSION
 from django.template.base import Template
 from django.template.context import Context
 
@@ -46,12 +47,25 @@ class TestTrustedFilters:
     # TODO: Write test for dictsort
     # TODO: Write test for dictsortreversed
     # TODO: Write test for divisibleby
-    # TODO: Write test for escape
+
+    def test_trust_escape(self):
+        expected = "&lt;b&gt;T&amp;Cs&lt;/b&gt;"
+        result = self._render("{{ value|escape }}", context={"value": "<b>T&Cs</b>"})
+        assert result == expected
 
     def test_trust_escapejs(self):
         expected = "\\u003Ctest\\u0026test\\u003E"
         result = self._render('{{ "<test&test>"|escapejs }}')
         assert result == expected
+
+    def test_trust_escapeseq(self):
+        if VERSION[0] == 5:
+            expected = "T&amp;Cs, &#x27;Test&#x27;"
+            result = self._render(
+                '{{ value|escapeseq|join:", " }}',
+                context={"value": ["T&Cs", "'Test'"]},
+            )
+            assert result == expected
 
     # FIXME
     # def test_trust_filesizeformat(self):
