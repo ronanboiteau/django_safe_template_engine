@@ -2,9 +2,9 @@
 
 ## Unreleased
 
-- Add official support for Django 4.2:
-    - Use Django 4.2 in automated tests
-    - Review all the Django 4.2 built-in template tags and filters (no changes needed)
+- Add official support for Django 4.0 to 4.2 with:
+    - Addition of automated test coverage
+    - Review of all the built-in template tags and filters (no changes needed)
 - Use [tox](https://tox.wiki/) to manage test suite environment
 
 ## 1.2.0 - 2024-04-18
