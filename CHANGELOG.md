@@ -6,7 +6,8 @@
 - Lower Python version requirement to 3.7
 - Add official support for Django 3.0 to 5.0 with:
     - Addition of automated test coverage
-    - Review of all the built-in template tags and filters (no changes needed)
+    - Review of all the built-in template tags and filters
+- Add support for Django 5's `escapeseq` filter
 - Use [tox](https://tox.wiki/) to manage test suite environment
 
 ## 1.2.0 - 2024-04-18
