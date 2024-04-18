@@ -21,4 +21,4 @@ jobs:
       - name: Install tox
         run: pip install tox
       - name: Use tox to run test suite
-        run: python -m tox -f py$(echo ${{ matrix.python-version }} | tr -d .)
+        run: python -m tox run -f py$(echo ${{ matrix.python-version }} | tr -d .)
