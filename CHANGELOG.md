@@ -2,8 +2,7 @@
 
 ## Unreleased
 
-- Lower version requirement for Django to 3.0
-- Add official support for Django 3.0 to 4.2 with:
+- Add official support for Django 4.0 to 4.2 with:
     - Add automated test coverage
     - Review of all the built-in template tags and filters (no changes needed)
 - Use [tox](https://tox.wiki/) to manage test suite environment
