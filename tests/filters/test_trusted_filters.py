@@ -104,10 +104,12 @@ class TestTrustedFilters:
 
     # TODO: Write test for last
 
-    def test_trust_length_is(self):
-        expected = "True"
-        result = self._render('{{ "abcd"|length_is:"4" }}')
-        assert result == expected
+    if VERSION <= (5, 1):
+
+        def test_trust_length_is(self):
+            expected = "True"
+            result = self._render('{{ "abcd"|length_is:"4" }}')
+            assert result == expected
 
     # TODO: Write test for length
     # TODO: Write test for linebreaks
