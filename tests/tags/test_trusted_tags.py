@@ -1,5 +1,6 @@
 import pytest
 from django import VERSION
+from django.http import QueryDict
 from django.template.base import Template
 from django.template.context import Context
 from django.template.exceptions import TemplateSyntaxError
@@ -147,7 +148,10 @@ class TestTrustedTags:
 
         def test_query_string(self):
             expected = "?color=red&size=S"
-            result = self._render('{% query_string color="red" size="S" %}')
+            result = self._render(
+                '{% query_string test_query_dict %}',
+                context={"test_query_dict": QueryDict("color=red&size=S")},
+            )
             assert result == expected
 
     # TODO: Write test for regroup
