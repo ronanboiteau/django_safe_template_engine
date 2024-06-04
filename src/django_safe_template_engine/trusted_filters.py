@@ -23,7 +23,6 @@ from django.template.defaultfilters import (
     json_script,
     last,
     length,
-    length_is,
     linebreaks_filter,
     linebreaksbr,
     linenumbers,
@@ -89,7 +88,12 @@ register.filter(iriencode, is_safe=True)
 register.filter(join, is_safe=True, needs_autoescape=True)
 register.filter(json_script, is_safe=True)
 register.filter(last, is_safe=True)
-register.filter(length_is, is_safe=False)
+
+if VERSION <= (5, 1):
+    from django.template.defaultfilters import length_is
+
+    register.filter(length_is, is_safe=False)
+
 register.filter(length, is_safe=False)
 register.filter("linebreaks", linebreaks_filter, is_safe=True, needs_autoescape=True)
 register.filter(linebreaksbr, is_safe=True, needs_autoescape=True)
