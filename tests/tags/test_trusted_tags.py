@@ -149,8 +149,8 @@ class TestTrustedTags:
         def test_query_string(self):
             expected = "?color=red&size=S"
             result = self._render(
-                '{% query_string test_query_dict %}',
-                context={"test_query_dict": QueryDict("color=red&size=S")},
+                '{% query_string test_query_dict color="red" size="S" %}',
+                context={"test_query_dict": QueryDict("color=blue")},
             )
             assert result == expected
 
