@@ -8,5 +8,6 @@ if __name__ == "__main__":
     import django
 
     django.setup()
+    exit_code = pytest.main()
 
-    pytest.main()
+    exit(exit_code)
