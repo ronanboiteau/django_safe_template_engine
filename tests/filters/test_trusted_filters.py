@@ -58,7 +58,7 @@ class TestTrustedFilters:
         result = self._render('{{ "<test&test>"|escapejs }}')
         assert result == expected
 
-    if VERSION[0] == 5:
+    if VERSION >= (5, 0):
 
         def test_trust_escapeseq(self):
             expected = "T&amp;Cs, &#x27;Test&#x27;"

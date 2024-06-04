@@ -75,7 +75,7 @@ register.filter(divisibleby, is_safe=False)
 register.filter("escape", escape_filter, is_safe=True)
 register.filter("escapejs", escapejs_filter)
 
-if VERSION[0] == 5:
+if VERSION >= (5, 0):
     from django.template.defaultfilters import escapeseq
 
     register.filter(escapeseq)
