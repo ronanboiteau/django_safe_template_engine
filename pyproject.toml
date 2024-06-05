@@ -1,6 +1,6 @@
 [project]
 name = "django_safe_template_engine"
-version = "1.3.1"
+version = "1.3.2"
 dependencies = ["django >= 3.0"]
 requires-python = ">=3.7"
 authors = [{ name = "Ronan Boiteau", email = "ronan@boiteau.eu" }]

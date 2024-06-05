@@ -5,6 +5,10 @@
 - Add official support for Django 5.1
 - Add support for Django 5.1's `query_string` template tag
 
+## 1.3.2 - 2024-06-05
+
+- Update dependencies to make it clear that version 1.3 is not compatible with Django 5.1
+
 ## 1.3.1 - 2024-04-18
 
 - Small fixes in changelog and README
