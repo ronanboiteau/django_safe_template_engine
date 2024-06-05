@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Update dependencies to make it clear that version 1.3 is not compatible with Django 5.1
+
 ## 1.3.1 - 2024-04-18
 
 - Small fixes in changelog and README
