@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Add official support for Django 5.1
+- Add official support Python 3.13
 - Add support for Django 5.1's `querystring` template tag
 - Drop official support for deprecated Python 3.7
 
