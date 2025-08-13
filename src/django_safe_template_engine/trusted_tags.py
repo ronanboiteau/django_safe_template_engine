@@ -37,7 +37,7 @@ register.tag(now)
 if VERSION >= (5, 1):
     from django.template.defaulttags import querystring
 
-    register.tag(querystring)
+    register.simple_tag(querystring, takes_context=True)
 
 register.tag(regroup)
 register.tag(resetcycle)
