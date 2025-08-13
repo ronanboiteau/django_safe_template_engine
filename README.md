@@ -20,7 +20,7 @@ Django template engine to render untrusted template code
 
 ## Requirements
 
-Django 3.0 to 5.1
+Django 3.0 to 5.2
 
 ## Available tools
 
