@@ -1,8 +1,8 @@
 [project]
 name = "django_safe_template_engine"
 version = "1.3.2"
-dependencies = ["django >= 3.0", "< 6"]
-requires-python = ">=3.7"
+dependencies = ["django >= 3.0, < 6"]
+requires-python = ">=3.8"
 authors = [{ name = "Ronan Boiteau", email = "ronan@boiteau.eu" }]
 maintainers = [{ name = "Ronan Boiteau", email = "ronan@boiteau.eu" }]
 description = "A Django template engine to render untrusted template code"
@@ -15,7 +15,6 @@ classifiers = [
   "Intended Audience :: Developers",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
