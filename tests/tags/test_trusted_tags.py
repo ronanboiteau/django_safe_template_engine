@@ -147,7 +147,7 @@ class TestTrustedTags:
     if VERSION >= (5, 1):
 
         def test_querystring(self):
-            expected = "?color=red&size=S"
+            expected = "?color=red&amp;size=S"
             result = self._render(
                 '{% querystring test_query_dict color="red" size="S" %}',
                 context={"test_query_dict": QueryDict("color=blue")},
