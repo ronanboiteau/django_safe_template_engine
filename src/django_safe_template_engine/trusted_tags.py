@@ -35,9 +35,9 @@ register.tag(lorem)
 register.tag(now)
 
 if VERSION >= (5, 1):
-    from django.template.defaulttags import query_string
+    from django.template.defaulttags import querystring
 
-    register.tag(query_string)
+    register.tag(querystring)
 
 register.tag(regroup)
 register.tag(resetcycle)
