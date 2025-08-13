@@ -1,3 +1,4 @@
+from django import VERSION
 from django.template.defaulttags import (
     autoescape,
     comment,
@@ -32,6 +33,12 @@ register.tag("if", do_if)
 register.tag(ifchanged)
 register.tag(lorem)
 register.tag(now)
+
+if VERSION >= (5, 1):
+    from django.template.defaulttags import querystring
+
+    register.simple_tag(querystring, takes_context=True)
+
 register.tag(regroup)
 register.tag(resetcycle)
 register.tag(spaceless)

@@ -1,4 +1,6 @@
 import pytest
+from django import VERSION
+from django.http import QueryDict
 from django.template.base import Template
 from django.template.context import Context
 from django.template.exceptions import TemplateSyntaxError
@@ -141,6 +143,16 @@ class TestTrustedTags:
         expected = ["0", "1"]
         result = self._render('{% now "I" %}')
         assert result in expected
+
+    if VERSION >= (5, 1):
+
+        def test_querystring(self):
+            expected = "?color=red&amp;size=S"
+            result = self._render(
+                '{% querystring test_query_dict color="red" size="S" %}',
+                context={"test_query_dict": QueryDict("color=blue")},
+            )
+            assert result == expected
 
     # TODO: Write test for regroup
 

@@ -58,7 +58,7 @@ class TestTrustedFilters:
         result = self._render('{{ "<test&test>"|escapejs }}')
         assert result == expected
 
-    if VERSION[0] == 5:
+    if VERSION >= (5, 0):
 
         def test_trust_escapeseq(self):
             expected = "T&amp;Cs, &#x27;Test&#x27;"
@@ -103,7 +103,14 @@ class TestTrustedFilters:
         assert result == expected
 
     # TODO: Write test for last
-    # TODO: Write test for length_is
+
+    if VERSION <= (5, 1):
+
+        def test_trust_length_is(self):
+            expected = "True"
+            result = self._render('{{ "abcd"|length_is:"4" }}')
+            assert result == expected
+
     # TODO: Write test for length
     # TODO: Write test for linebreaks
     # TODO: Write test for linebreaksbr
