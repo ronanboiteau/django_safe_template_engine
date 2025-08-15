@@ -3,7 +3,7 @@
 ## 1.4.0 - 2025-08-13
 
 - Add official support for Django 5.1 and 5.2
-- Add official support Python 3.13
+- Add official support for Python 3.13
 - Add support for Django 5.1's `querystring` template tag
 - Drop official support for deprecated Python 3.7
 
