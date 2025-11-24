@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-- Add offical support for Django 6.0
 - Add support for Django 6's `partial` and `partialdef` template tags
+- Add official support for Django 6.0
 - Add official support for Python 3.14
 - Add missing documentation about support for Django 5.1's `querystring` template tag
 - Improve mypy type checking coverage
