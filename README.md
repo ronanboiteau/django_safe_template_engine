@@ -60,6 +60,8 @@ The following tags and filters are allowed by this template engine.
 - [`ifchanged`](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#ifchanged)
 - [`lorem`](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#lorem)
 - [`now`](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#now)
+- [`partial`](https://docs.djangoproject.com/en/6.0/ref/templates/builtins/#partial)
+- [`partialdef`](https://docs.djangoproject.com/en/6.0/ref/templates/builtins/#partialdef)
 - [`querystring`](https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#querystring)
 - [`regroup`](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#regroup)
 - [`resetcycle`](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#resetcycle)

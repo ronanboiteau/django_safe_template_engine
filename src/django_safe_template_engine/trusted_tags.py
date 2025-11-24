@@ -34,6 +34,12 @@ register.tag(ifchanged)
 register.tag(lorem)
 register.tag(now)
 
+if VERSION >= (6, 0):
+    from django.template.defaulttags import partial, partialdef
+
+    register.simple_tag(partial)
+    register.simple_tag(partialdef)
+
 if VERSION >= (5, 1):
     from django.template.defaulttags import querystring
 
