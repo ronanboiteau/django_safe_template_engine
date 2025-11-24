@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add missing documentation about support for Django 5.1's `querystring` template tag
 - Improve mypy type checking coverage
 
 ## 1.4.0 - 2025-08-13
