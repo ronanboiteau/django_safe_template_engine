@@ -151,7 +151,7 @@ tox run
 
 ### Ignore code formatting revisions from git blame
 
-For a more relevant git blame you can set up your git to use the file [`.git-blame-ignore-revs`](.git-blame-ignore-revs) in [`blame.ignoreRevsFile`](https://www.git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt):
+For a more relevant git blame you can set up your git to use the file [`.git-blame-ignore-revs`](https://github.com/ronanboiteau/django_safe_template_engine/blob/main/.git-blame-ignore-revs) in [`blame.ignoreRevsFile`](https://www.git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt):
 
 ```sh
 git config blame.ignoreRevsFile .git-blame-ignore-revs
