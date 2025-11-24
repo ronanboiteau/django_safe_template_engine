@@ -35,10 +35,10 @@ register.tag(lorem)
 register.tag(now)
 
 if VERSION >= (6, 0):
-    from django.template.defaulttags import partial, partialdef
+    from django.template.defaulttags import partial_func, partialdef_func
 
-    register.simple_tag(partial)
-    register.simple_tag(partialdef)
+    register.tag("partial", partial_func)
+    register.tag("partialdef", partialdef_func)
 
 if VERSION >= (5, 1):
     from django.template.defaulttags import querystring
