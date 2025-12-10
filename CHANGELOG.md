@@ -1,8 +1,9 @@
 # Changelog
 
-## Unreleased
+## 1.5.1 - 2025-12-11
 
 - Update tests to use Django 6.0 instead of 6.0rc1
+- Fix a broken link on PyPi
 
 ## 1.5.0 - 2025-11-24
 
