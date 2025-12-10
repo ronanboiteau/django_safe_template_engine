@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Update tests to use Django 6.0 instead of 6.0rc1
+
 ## 1.5.0 - 2025-11-24
 
 - Add support for Django 6's `partial` and `partialdef` template tags
