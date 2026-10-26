@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Add official support for Django 6.1
+- Do not trust Django 6.1's new `csp_nonce_attr` template tag
+- Use Django 6.1 links when linking Django documentation
+
 ## 1.5.1 - 2025-12-11
 
 - Update tests to use Django 6.0 instead of 6.0rc1
