@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add official support for Python 3.15
 - Add official support for Django 6.1
 - Do not trust Django 6.1's new `csp_nonce_attr` template tag
 - Use Django 6.1 links when linking Django documentation
