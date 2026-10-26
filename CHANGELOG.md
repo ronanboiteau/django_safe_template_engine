@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.6.0 - 2026-10-26
 
 - Add official support for Python 3.15
 - Add official support for Django 6.1

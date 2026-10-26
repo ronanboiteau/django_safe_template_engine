@@ -145,11 +145,9 @@ class TestTrustedTags:
         assert result in expected
 
     if VERSION >= (6, 0):
+
         def test_trust_partial_partialdef(self):
-            expected = (
-                "<button>Submit</button>"
-                "<button>Submit</button>"
-            )
+            expected = "<button>Submit</button>" "<button>Submit</button>"
             result = self._render(
                 "{% partialdef button %}"
                 "<button>Submit</button>"
