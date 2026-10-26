@@ -30,6 +30,13 @@ class TestUntrustedTags:
         ):
             self._render("{% csrf_token %}")
 
+    def test_do_not_trust_csp_nonce_attr(self):
+        with pytest.raises(
+            TemplateSyntaxError,
+            match=self._msg_regex("csp_nonce_attr"),
+        ):
+            self._render("{% csp_nonce_attr %}")
+
     def test_do_not_trust_debug(self):
         with pytest.raises(
             TemplateSyntaxError,
