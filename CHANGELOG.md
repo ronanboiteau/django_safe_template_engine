@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.7.0 - 2026-11-03
 
 - Add official support for Python 3.15
 
